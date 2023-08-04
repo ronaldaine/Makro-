@@ -111,6 +111,5 @@ def signup(request):
     else:
         form = UserCreationForm()
     
-    return render(request, 'userprofile/signup.html', {
-        'form': form
-    })
+    context = {'form': form}
+    return render(request, 'userprofile/signup.html', context)
